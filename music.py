@@ -33,3 +33,11 @@ st.subheader("previous songs")
 db_reader = pd.read_csv(FILE_NAME)
 
 st.dataframe(db_reader, use_container_width=True)
+f os.path.exists(FILE_NAME):
+    with open(FILE_NAME, "rb") as f:
+        st.download_button(
+            label="تحميل البيانات (نسخة احتياطية)",
+            data=f,
+            file_name="music_backup.csv",
+            mime="text/csv"
+        )
