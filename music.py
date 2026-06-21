@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 
-FILE_NAME = "music_zanabka.csv"
+FILE_NAME = "music_test.csv"
 
 if not os.path.exists(FILE_NAME):
     db = pd.DataFrame(columns=["user", "Artist", "song"])
